@@ -1,0 +1,81 @@
+# what is *Ethereum*?
+
+Ethereum is like a single global computer that everyone can use,
+stores inofrmation & when people make trancaction or run programs it updates that infromation in a predictble way that everyone agrees on.
+Open source, globally decentralized computing infrastructure that executes programs called *smart contracts*. 
+It uses a blockchain to synchronize and store the system’s state changes, along with a cryptocurrency called *ether* to meter and constrain execution resource costs.
+
+## how ethereum is diifernt from Bitcoin BlockChian
+ 
+ *State Machine*
+**Bitcoin's** blockchain tracks only one thing "Who has how many Bitcoin"
+ When someone sends Bitcoin, the scoreboard updates
+ That's all it can track
+
+**Ethereum**can track anything : money ,contarcts,data,games,programs.
+
+**key–value tuple**. key - label on the folder
+value - whats inside the folder.
+  Ethereum has memory that stores both code and data, and it uses the Ethereum blockchain to track how this memory changes over time. 
+-Normal computer's RAM stores:
+Programs currently running
+Data being used
+Variables and their values
+
+Ethereum's "RAM":
+
+Stores smart contracts (programs)
+Stores contract data
+Tracks all changes forever
+Everyone has the same copy
+
+### Components of Ethereum
+
+P2P network
+Ethereum runs on the Ethereum main network, which is addressable on TCP port 30303, and runs a protocol called ÐΞVp2p.
+
+Consensus rules
+Ethereum’s consensus rules are defined in the reference specification, the Yellow Paper.
+
+Transactions
+Ethereum transactions are network messages that include (among other things) a sender, recipient, value, and data payload.
+
+State machine
+Ethereum state transitions are processed by the Ethereum Virtual Machine (EVM), a stack-based virtual machine that executes bytecode (machine-language instructions). EVM programs, called "smart contracts," are written in high-level languages (e.g., Solidity) and converted to bytecode for execution on the EVM.
+
+Data structures
+Ethereum’s state is stored locally on each node as a database (usually Google’s LevelDB), which contains the transactions and system state in a serialized hashed data structure called a *Merkle Patricia Tree*.
+
+Consensus algorithm
+Proof of work 
+Ethereum uses Bitcoin’s consensus model, Nakamoto Consensus, which uses sequential single-signature blocks, weighted in importance by PoW to determine the longest chain and therefore the current state. 
+
+Economic security
+Ethereum currently uses a PoW algorithm called *Ethash*, but this will eventually be dropped with the move to PoS at some point in the future.
+
+Clients
+Ethereum has several interoperable implementations of the client software, the most prominent of which are Go-Ethereum (Geth) and Parity.
+
+#### Turing Complete
+
+**Calculator: Can only do math (not Turing complete)
+Your computer: Can run any program - games, browsers, video editors (Turing complete)
+Bitcoin: Like a calculator - only handles money transfers (not Turing complete)
+Ethereum: Like a full computer - can run any program (Turing complete)
+**
+
+Ethereum’s ability to execute a stored program, in a state machine called the Ethereum Virtual Machine, while reading and writing data to memory makes it a Turing-complete system and therefore a UTM. Ethereum can compute any algorithm that can be computed by any Turing machine, given the limitations of finite memory.
+
+problem : Turing-complete systems can run in "infinite loops,","Use excessive memory","attack the world computer"
+
+
+solution: Ethereum introduces a metering mechanism called *gas*. As the EVM executes a smart contract, it carefully accounts for every instruction (computation, data access, etc.). 
+-You pay for gas with ETH
+-Set a gas limit when sending a transaction
+-If gas runs out, execution stops
+Unused gas gets refunded
+-Each instruction has a predetermined cost in units of gas. 
+
+-Run out of gas, program stops,
+-Expensive operations cost more gas
+-Attackers must pay for their attacks
