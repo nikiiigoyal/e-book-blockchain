@@ -16,7 +16,8 @@ It uses a blockchain to synchronize and store the system’s state changes, alon
 
 **key–value tuple**. key - label on the folder
 value - whats inside the folder.
-  Ethereum has memory that stores both code and data, and it uses the Ethereum blockchain to track how this memory changes over time. 
+Ethereum has memory that stores both code and data, and it uses the Ethereum blockchain to track how this memory changes over time. 
+
 -Normal computer's RAM stores:
 Programs currently running
 Data being used
@@ -57,12 +58,17 @@ Clients
 Ethereum has several interoperable implementations of the client software, the most prominent of which are Go-Ethereum (Geth) and Parity.
 
 #### Turing Complete
+**Turing completeness is the property of a system that means it can solve any computational problem, given enough time and memory.**
 
 **Calculator: Can only do math (not Turing complete)
 Your computer: Can run any program - games, browsers, video editors (Turing complete)
 Bitcoin: Like a calculator - only handles money transfers (not Turing complete)
 Ethereum: Like a full computer - can run any program (Turing complete)
 **
+**If a programming language has these three capabilities, it is almost certainly Turing complete.**
+***Conditional Branching** (`if` statements): The ability to make decisions. "If this is true, do that; otherwise, do something else."
+**Unbounded Looping** (`while` or `for` loops): The ability to repeat a set of instructions over and over until a condition is met. This is the "enough time" part.
+**Way to Read/Write to Memory** (variables): The ability to store and retrieve data. This is the "enough memory" part.*
 
 Ethereum’s ability to execute a stored program, in a state machine called the Ethereum Virtual Machine, while reading and writing data to memory makes it a Turing-complete system and therefore a UTM. Ethereum can compute any algorithm that can be computed by any Turing machine, given the limitations of finite memory.
 
@@ -79,3 +85,35 @@ Unused gas gets refunded
 -Run out of gas, program stops,
 -Expensive operations cost more gas
 -Attackers must pay for their attacks
+
+##### Ethereum currency unit - Ether
+1 ether = 1,000,000,000,000,000,000 *wei* (that's 18 zeros)
+Wei is the smallest unit.
+All calculations internally happen in wei, even though we usually think in ether.
+
+
+**Wallets**
+A wallet is software that:
+
+Manages your private keys (keeps them secure)
+Shows your account balance
+Helps you send transactions
+Critical point: The wallet doesn't actually hold your money - your money exists on the blockchain. The wallet just holds the keys to access it.
+
+
+Two Types of Accounts 
+**Externally Owned Accounts (EOAs)**
+*Think of these as personal bank accounts:*
+
+Has a private key (like bank PIN) - whoever controls this controls the account
+Can initiate transactions - can send money or interact with contracts
+
+**Contract Accounts**
+*Think of these as automated bank accounts with built-in rules:*
+
+No private key - instead, they're controlled by code (smart contracts)
+Cannot initiate transactions - they can only respond when someone else contacts them
+Have their own Ethereum address - can send ether to them
+Run programs when contacted - like a vending machine that executes code when you insert coins
+
+**zero address** - The zero address is a special address that tells the Ethereum blockchain that you want to register a contract.
