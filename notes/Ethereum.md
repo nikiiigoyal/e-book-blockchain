@@ -114,6 +114,6 @@ Can initiate transactions - can send money or interact with contracts
 No private key - instead, they're controlled by code (smart contracts)
 Cannot initiate transactions - they can only respond when someone else contacts them
 Have their own Ethereum address - can send ether to them
-Run programs when contacted - like a vending machine that executes code when you insert coins
-
+Run programs when contacted - like a vending machine that executes code when you insert coins.
+.
 **zero address** - The zero address is a special address that tells the Ethereum blockchain that you want to register a contract.
