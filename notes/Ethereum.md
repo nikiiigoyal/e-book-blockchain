@@ -109,7 +109,7 @@ Has a private key (like bank PIN) - whoever controls this controls the account
 Can initiate transactions - can send money or interact with contracts
 
 **Contract Accounts**
-*Think of these as automated bank accounts with built-in rules:*
+  *Like as automated bank accounts with built-in rules:*
 
 No private key - instead, they're controlled by code (smart contracts)
 Cannot initiate transactions - they can only respond when someone else contacts them
