@@ -79,3 +79,19 @@ function add(uint _x, uint _y) public returns (uint) {
   emit IntegersAdded(_x, _y, result);
   return result;
 } -->
+
+**Mapping** : key - value store its like a data type
+<!-- mapping (address => uint) public accountBalance;
+the key is an address and the value is a uint,declared it public and name is accounBalance -->
+
+**Addresses** : its owned by a specific user unique to all.
+
+**GLobal Variables** -
+*msg.sender*
+
+Two locations you can store variables — **in storage and in memory.**
+
+**Storage** refers to variables stored permanently on the blockchain.
+State variables (variables declared outside of functions) are by default storage and written permanently to the blockchain, while variables declared inside functions are memory and will disappear when the function call ends.
+**Memory** variables are temporary, and are erased between external function calls to your contract. 
+*Think of it like your computer's hard disk vs RAM.*
